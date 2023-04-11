@@ -16,8 +16,6 @@ body {
   align-items: center;
   width: 100vw;
   min-height: 100vh;
-  
-  
 }
 .price-card {
   margin-right: 20px;
@@ -27,9 +25,6 @@ body {
   padding: 0;
   position: relative;
   overflow: hidden;
-
-  &__popular-lable {
-  }
 
   &__title {
     font-weight: 700;
@@ -112,6 +107,7 @@ body {
       background-color: #3a6ba5;
     }
   }
+
   &_high-price {
     & .price-card__price {
       background-color: #ec632a;
@@ -140,6 +136,7 @@ body {
 
 .popular-label::after {
   content: "popular";
+  text-transform: uppercase;
   position: absolute;
   height: 25px;
   width: 147px;

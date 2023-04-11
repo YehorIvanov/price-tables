@@ -122,6 +122,7 @@ body {
 
 .popular-label::after {
   content: "popular";
+  text-transform: uppercase;
   position: absolute;
   height: 25px;
   width: 147px;
