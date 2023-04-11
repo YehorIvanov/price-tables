@@ -21,10 +21,13 @@ body {
 }
 
 .price-card {
+  margin-right: 20px;
   width: 380px;
   height: 770px;
   background-color: #334247;
   padding: 0;
+  position: relative;
+  overflow: hidden;
 }
 .price-card__title {
   font-weight: 700;
@@ -50,7 +53,7 @@ body {
 }
 .price-card__description {
   margin: 0;
-  padding: 40px 26px;
+  padding: 40px 0;
 }
 .price-card__options-list {
   margin: 0;
@@ -60,21 +63,77 @@ body {
 .price-card__option {
   line-height: 50px;
   padding-left: 59px;
+  position: relative;
+  list-style: none;
 }
 .price-card__option:nth-of-type(odd) {
-  background-color: #2A3438;
+  background-color: #2a3438;
 }
-.price-card__option::marker {
-  background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_green.png);
+.price-card__option::before {
+  position: absolute;
+  content: " ";
+  left: 22px;
+  top: 18px;
   width: 15px;
   height: 13px;
-  display: block;
-  color: #5BB189;
-  content: " ";
+}
+.price-card__order-btn {
+  margin: 39px auto;
+}
+.price-card_low-price .price-card__price {
+  background-color: #5bb189;
+}
+.price-card_low-price .price-card__option::before {
+  background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_green.png);
+}
+.price-card_low-price .price-card__order-btn {
+  background-color: #5bb189;
+}
+.price-card_medium-price .price-card__price {
+  background-color: #3a6ba5;
+}
+.price-card_medium-price .price-card__option::before {
+  background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_blue.png);
+}
+.price-card_medium-price .price-card__order-btn {
+  background-color: #3a6ba5;
+}
+.price-card_high-price .price-card__price {
+  background-color: #ec632a;
+}
+.price-card_high-price .price-card__option::before {
+  background-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_orange.png);
+}
+.price-card_high-price .price-card__order-btn {
+  background-color: #ec632a;
 }
 
-.price-card_low .price-card__price {
-  background-color: #5BB189;
+.order-btn {
+  border-radius: 20px;
+  line-height: 40px;
+  width: 154px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  height: 40px;
+  color: #fff;
+}
+
+.popular-label::after {
+  content: "popular";
+  position: absolute;
+  height: 25px;
+  width: 147px;
+  background-color: #dc3f45;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  transform: rotate(45deg);
+  text-align: center;
+  top: 31px;
+  right: -31px;
 }
 
 /*# sourceMappingURL=styles.css.map */
