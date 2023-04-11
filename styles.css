@@ -29,6 +29,9 @@ body {
   position: relative;
   overflow: hidden;
 }
+.price-card:last-of-type {
+  margin-right: 0;
+}
 .price-card__title {
   font-weight: 700;
   font-size: 35px;

@@ -26,6 +26,10 @@ body {
   position: relative;
   overflow: hidden;
 
+  &:last-of-type {
+    margin-right: 0;
+  }
+  
   &__title {
     font-weight: 700;
     font-size: 35px;
